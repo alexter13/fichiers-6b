@@ -16,7 +16,15 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ---
 
-## 🆕 Nouveautés de la version 1.6
+## 🆕 Nouveautés de la version 1.7
+
+- 📲 **Envoyer des fichiers d'un téléphone à l'autre par QR code** : sélectionnez, l'écran affiche un QR code, l'autre téléphone le scanne et reçoit tout par le Wi-Fi, sans Internet, sans compte et sans câble. Fonctionne aussi vers un **iPhone** ou un téléphone sans l'appli (une page de téléchargement s'ouvre, avec un bouton « Tout télécharger »)
+- 🗜️ **Parcourir les 7z, RAR et TAR comme un dossier** : ouvrir une photo ou un document sans tout extraire (7z, RAR, TAR, TAR.GZ, TAR.BZ2, TAR.XZ, GZ, BZ2, XZ)
+- 📦 **RAR 5 et RAR 7 pris en charge** (format par défaut de WinRAR depuis des années), y compris les archives à mot de passe et à noms chiffrés
+- 🗜️ **Créer des archives 7z et TAR.GZ** en plus du ZIP (compatibles 7-Zip, WinRAR, macOS et Linux ; noms accentués conservés)
+- 🧹 **Libérer de l'espace après la sauvegarde automatique** (option) : les photos déjà sauvegardées depuis plus de 30, 90, 180 ou 365 jours sont retirées du téléphone, **uniquement après vérification sur le serveur** (même taille, fichier inchangé depuis l'envoi)
+
+### Version 1.6
 
 - 🎬 **Vidéos et musiques du NAS lues en continu** (SMB, SFTP, FTPS, WebDAV, Google Drive, coffre-fort) : lecture immédiate et avance rapide, sans télécharger le fichier
 - 🖼️ **Miniatures des photos du NAS, de Nextcloud ou du serveur SFTP**, gardées en cache (150 Mo max)
@@ -28,7 +36,7 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ### Version 1.5
 
-- 💾 **Sauvegarde automatique** de vos photos et documents vers votre **NAS, Nextcloud, serveur SFTP ou Google Drive** : en Wi-Fi seulement, en charge si vous voulez, toutes les 1 à 24 h ; seuls les fichiers nouveaux ou modifiés partent, rien n'est jamais supprimé
+- 💾 **Sauvegarde automatique** de vos photos et documents vers votre **NAS, Nextcloud, serveur SFTP ou Google Drive** : en Wi-Fi seulement, en charge si vous voulez, toutes les 1 à 24 h ; seuls les fichiers nouveaux ou modifiés partent, rien n'est supprimé sur le serveur
 - 🧹 **Nettoyeur** : dossiers vides, caches de miniatures, fichiers temporaires, APK déjà installés, vieux téléchargements — avec aperçu avant suppression
 - 📲 **Changement de téléphone facilité** : export de toute la configuration (connexions, favoris, réglages, sauvegardes) dans un fichier chiffré
 - 🔐 **Sauvegarde du coffre-fort** en ZIP AES-256 et **restauration** en un geste (« Extraire dans le coffre-fort »)
@@ -108,9 +116,9 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **Applications installées** : sauvegarder l'APK, partager, désinstaller
 
 ### 🗜️ Archives
-- **ZIP, 7z, RAR 4, TAR, TAR.GZ / TGZ, TAR.BZ2, TAR.XZ, GZ, BZ2, XZ** : extraction ici ou dans un sous-dossier
-- Parcourir un ZIP comme un dossier, ZIP et 7z **protégés par mot de passe**
-- Créer un ZIP, avec **mot de passe AES-256** en option
+- **ZIP, 7z, RAR (de RAR 1.5 à RAR 7, RAR 5 compris), TAR, TAR.GZ / TGZ, TAR.BZ2, TAR.XZ, GZ, BZ2, XZ** : extraction ici ou dans un sous-dossier
+- **Parcourir toutes ces archives comme un dossier** et ouvrir un fichier sans tout extraire ; ZIP, 7z et RAR **protégés par mot de passe**
+- Créer un **ZIP** (avec **mot de passe AES-256** en option), un **7z** (meilleure compression) ou un **TAR.GZ**
 - **Protection contre les archives piégées** : chemins `../` et liens symboliques bloqués, arrêt automatique des « bombes de décompression » (taux de compression anormal, espace disque insuffisant, nombre d'entrées excessif)
 
 ### 🎬 Lecteurs intégrés
@@ -124,6 +132,7 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **SFTP** (SSH) : mot de passe ou clé privée
 - **FTPS / FTP**
 - **Découverte du réseau** : détection automatique des NAS et serveurs du Wi-Fi (SMB, SFTP, FTP, WebDAV) et **liste des partages** d'un serveur, connexion pré-remplie en un geste
+- **Envoi vers un téléphone par QR code** : le destinataire scanne et reçoit les fichiers par le Wi-Fi (avec Fichiers 6b : dossier « Téléchargements/Fichiers 6b reçus » ; sans l'appli ou sur iPhone : page de téléchargement). Adresse secrète à usage unique (jeton 128 bits), seuls les fichiers choisis sont visibles, arrêt automatique après 15 min d'inactivité
 - **Partage Wi-Fi vers PC** : récupérez (et déposez) des fichiers du téléphone depuis le navigateur d'un ordinateur, sans câble ni logiciel
 - Copier et déplacer **entre tous les emplacements** : téléphone ↔ Drive ↔ Nextcloud ↔ NAS ↔ serveur
 
@@ -131,7 +140,8 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - Choisissez un dossier (Appareil photo, Captures d'écran, Documents, Téléchargements ou n'importe quel dossier) et une destination (NAS SMB, SFTP, FTPS, WebDAV/Nextcloud, Google Drive)
 - Fréquence de 1 à 24 h, **Wi-Fi uniquement** et **en charge uniquement** en option, batterie faible respectée
 - Envoi **incrémental** (seuls les nouveaux fichiers ou modifiés), écriture sous nom temporaire puis renommage : jamais de fichier tronqué sur le serveur
-- **Aucune suppression**, ni sur le téléphone ni sur le serveur ; bilan affiché après chaque passage
+- **Aucune suppression sur le serveur** ; bilan affiché après chaque passage
+- **Libérer de l'espace** (option désactivée par défaut, confirmation demandée) : retire du téléphone les fichiers sauvegardés depuis plus de 30, 90, 180 ou 365 jours, seulement s'ils sont inchangés depuis l'envoi et présents sur le serveur avec la même taille (vérifié juste avant ; au moindre doute, le fichier est gardé)
 
 ### 🧹 Nettoyeur
 - Dossiers vides, caches de miniatures (`.thumbnails`), fichiers temporaires et téléchargements interrompus, verrous Office, `Thumbs.db`
@@ -205,13 +215,15 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 
 **Le partage Wi-Fi est-il sûr ?** Il n'est accessible que depuis votre réseau local, protégé par un mot de passe aléatoire renouvelé à chaque démarrage, et s'arrête seul après 30 minutes d'inactivité. Le trafic n'étant pas chiffré, ne l'utilisez pas sur un Wi-Fi public.
 
-**Mes RAR ne s'ouvrent pas ?** Seul le format RAR 4 est pris en charge (le format RAR 5 est propriétaire). Les ZIP et 7z sont lus intégralement.
+**Mes RAR ne s'ouvrent pas ?** Depuis la 1.7, tous les formats RAR sont lus (RAR 1.5 à RAR 7). Seule exception : les archives créées avec un dictionnaire géant (option WinRAR 7 de plus d'1 Go) dépassent la mémoire d'un téléphone ; un message l'indique clairement.
+
+**Pourquoi l'appli demande l'accès à l'appareil photo ?** Uniquement pour scanner le QR code d'un envoi entre téléphones, au moment où vous appuyez sur « Scanner ». Le scanner est intégré (ZXing) : il fonctionne hors ligne et n'utilise pas les services Google.
 
 ---
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.6 : `c0a275cd1926591b0bf3fb2279215e357f144f0f2325d1449ca07d03fc334837`
+- Empreinte SHA-256 de l'APK 1.7 : `a98446835e3a29375e9d2154d4c28d5cbc1343dde61cd2e0d98561f4c7e053cf`
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">

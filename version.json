@@ -1,7 +1,7 @@
 {
-  "version": "1.6",
+  "version": "1.7",
   "apk": "Fichiers6b.apk",
-  "size": 8809524,
-  "sha256": "c0a275cd1926591b0bf3fb2279215e357f144f0f2325d1449ca07d03fc334837",
-  "notes": "- Vidéos et musiques du NAS (SMB, SFTP, FTPS, WebDAV, Drive) et du coffre lues en continu, sans téléchargement préalable.\n- Miniatures des photos des serveurs, gardées en cache.\n- Fichier du serveur modifié dans Word/Excel : renvoi proposé au retour (sans écraser une version modifiée entre-temps).\n- Accès à Android/data et Android/obb sans root via Shizuku.\n- Découverte réseau : noms NetBIOS et Bonjour, box identifiée, type d'appareil, interface d'administration, balayage plus rapide.\n- Sauvegardes fiables : aide pour l'économie de batterie (Xiaomi, Huawei, Samsung, Oppo, Vivo).\n- Journal d'erreurs local : rien n'est envoyé sans votre accord."
+  "size": 9003696,
+  "sha256": "a98446835e3a29375e9d2154d4c28d5cbc1343dde61cd2e0d98561f4c7e053cf",
+  "notes": "- Envoi de fichiers d'un téléphone à l'autre par QR code, par le Wi-Fi, sans Internet ni compte (fonctionne aussi vers un iPhone).\n- Parcourir les 7z, RAR et TAR comme un dossier, sans tout extraire.\n- RAR 5 et RAR 7 pris en charge, y compris avec mot de passe.\n- Création d'archives 7z et TAR.GZ en plus du ZIP.\n- Sauvegarde automatique : option « Libérer de l'espace » (fichiers sauvegardés et vérifiés sur le serveur retirés du téléphone après 30 à 365 jours)."
 }
