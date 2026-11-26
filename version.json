@@ -1,7 +1,8 @@
 {
-  "version": "1.8",
+  "version": "1.9",
   "apk": "Fichiers6b.apk",
-  "size": 9127781,
-  "sha256": "3ccb72026343bb72ca1494da23cdab256cba34ff4b78e3c8ec715333249c697d",
-  "notes": "- Audit de sécurité du réseau local (SMBv1, partages sans mot de passe, Telnet, FTP anonyme, SNMP public, RDP sans NLA, certificats...) avec rapport.\n- Outils réseau : ping, ports, DNS, Wi-Fi, réveil à distance des PC.\n- Partager sans métadonnées (GPS, appareil, auteur) : photos, Office, PDF.\n- Analyse d'un APK avant installation (signature, autorisations sensibles).\n- Changer de téléphone : tout transférer par QR code, fichiers remis à leur place.\n- Rangement automatique par règles.\n- Raccourcis et tuiles des réglages rapides.\n- Google Drive : renouvellement de l'autorisation en un geste."
+  "url": "https://github.com/alexter13/fichiers-6b/releases/download/v1.9/Fichiers6b.apk",
+  "size": 8029504,
+  "sha256": "5876b4bad42da143ed80555615375d20ec14b931b1f56aeffb80dee727247177",
+  "notes": "- Partager sans métadonnées : nettoyage complet des PDF (propriétés, XMP, données des logiciels, auteurs des commentaires), y compris les parties compressées.\n- Photos intégrées aux PDF : position GPS, appareil et dates retirés sans recompression.\n- PDF protégé par mot de passe : jamais envoyé sans nettoyage, explication affichée.\n- Toutes les versions sur la page Releases du projet ; mises à jour téléchargées depuis la Release, avec repli automatique.\n- Application plus légère (7,7 Mo au lieu de 8,7 Mo).\n- À propos : liens cliquables et composants à jour."
 }

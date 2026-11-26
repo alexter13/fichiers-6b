@@ -8,15 +8,24 @@
 
 Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](https://www.6bernova.fun)
 
-### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/raw/main/Fichiers6b.apk) 👈
+### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/releases/latest/download/Fichiers6b.apk) 👈
 
-*Lien direct, toujours la dernière version (actuellement **1.6**) · Android 8.0 ou plus récent · 8,4 Mo*
+*Lien direct, toujours la dernière version (actuellement **1.9**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
 
 </div>
 
 ---
 
-## 🆕 Nouveautés de la version 1.8
+## 🆕 Nouveautés de la version 1.9
+
+- 📄 **PDF vraiment nettoyés avant partage** (« Partager sans métadonnées ») : le fichier est réécrit, ce qui atteint aussi les informations rangées dans les parties compressées. Sont retirés : titre, auteur, sujet, mots-clés, logiciels, dates, champs personnalisés (société...), **toutes les métadonnées XMP**, données privées des logiciels de mise en page (Illustrator, Photoshop...), **auteurs des commentaires et surlignages** (remplacés par « Auteur ») ; l'identifiant interne du fichier est renouvelé. Texte, pages, champs de formulaire et pièces jointes sont conservés
+- 📷 **Photos intégrées aux PDF** (applis de numérisation, exports d'images) : position GPS, appareil, numéros de série et dates de prise de vue retirés de chaque photo, **sans recompression**
+- 🔒 **PDF protégé par mot de passe** : il n'est jamais envoyé sans avoir été nettoyé ; un message explique pourquoi et propose le partage normal si vous le souhaitez
+- 📦 **Toutes les versions sur la page [Releases](https://github.com/alexter13/fichiers-6b/releases)** : notes, APK et empreinte de chaque version. L'appli y télécharge ses mises à jour, avec repli automatique sur le dépôt si la page est indisponible ; lien « Toutes les versions » dans *À propos*
+- 🧪 **Qualité** : plus de 325 vérifications automatiques contre de vrais serveurs (SMB, SFTP, FTPS, WebDAV, SNMP, DNS, MQTT...) et sur des fichiers de référence contrôlés par des outils indépendants (exiftool, qpdf, pdfinfo, LibreOffice, 7-Zip), plus des tests de l'interface
+- ℹ️ *À propos* : liens cliquables et liste complète des composants libres utilisés
+
+### Version 1.8
 
 - 🛡️ **Audit de sécurité du réseau local** (depuis la découverte du réseau) : Telnet et FTP en clair, FTP anonyme, **SMBv1**, signature SMB non exigée, **partages accessibles sans mot de passe** (et modifiables), SNMP « public », bureau à distance sans NLA, VNC, Redis, MQTT, Elasticsearch et API Docker sans authentification, TLS 1.0/1.1, certificats expirés, SHA-1 ou RSA 1024. Gravité, correction proposée et **rapport partageable**. Vérifications en lecture seule, sans essai de mot de passe
 - 🧰 **Outils réseau de terrain** : ping, test de ports avec bannières, **DNS** (A, AAAA, MX, TXT, NS, CNAME, PTR, SRV, CAA, sur le serveur de votre choix), **informations Wi-Fi** (canal, signal, norme, sécurité, réseaux voisins et canal le moins encombré), **réveil à distance des PC** (Wake-on-LAN)
@@ -84,7 +93,7 @@ La plupart des explorateurs de fichiers gratuits du Play Store se financent par 
 
 ## 📥 Installation
 
-1. Sur le téléphone, touchez **[Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/raw/main/Fichiers6b.apk)** : le fichier `Fichiers6b.apk` se télécharge.
+1. Sur le téléphone, touchez **[Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/releases/latest/download/Fichiers6b.apk)** : le fichier `Fichiers6b.apk` se télécharge.
 2. Ouvrez le fichier téléchargé (notification ou dossier **Téléchargements**).
 3. Si Android le demande, autorisez votre navigateur à **installer des applications inconnues**, puis revenez en arrière et touchez **Installer**.
 4. Si **Google Play Protect** affiche un avertissement (normal pour une application hors Play Store) : touchez **Plus de détails** → **Installer quand même**.
@@ -224,9 +233,13 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 **Pourquoi ce n'est pas sur le Play Store ?** L'application est distribuée directement par son éditeur. Les mises à jour sont intégrées à l'application.
 
-**Puis-je voir le dossier `Android/data` ?** Non : Android le réserve au système depuis la version 11, pour tous les explorateurs (sauf téléphone rooté).
+**Puis-je voir le dossier `Android/data` ?** Android le réserve au système depuis la version 11, pour tous les explorateurs. Fichiers 6b y accède quand même grâce à Shizuku (voir ci-dessous), sans rooter le téléphone.
 
-**Comment changer de téléphone ?** Réglages → *Exporter la configuration* et *Sauvegarder le coffre-fort* : copiez les deux fichiers sur le nouveau téléphone, installez Fichiers 6b, puis ouvrez-les depuis l'explorateur.
+**Comment changer de téléphone ?** Installez Fichiers 6b sur le nouveau téléphone. Sur l'ancien : Accueil → *Changer de téléphone*, cochez ce qu'il faut transférer (dossiers, connexions, coffre-fort) ; sur le nouveau : *Recevoir (QR)* et scannez le code. Chaque fichier retrouve son dossier et sa date.
+
+**Où trouver une ancienne version ?** Sur la page [Releases](https://github.com/alexter13/fichiers-6b/releases) : chaque version y garde son APK, ses notes et son empreinte.
+
+**Pourquoi un PDF n'est-il pas partagé « sans métadonnées » ?** Il est protégé par un mot de passe ou chiffré : ses informations ne peuvent pas être retirées sans le mot de passe du propriétaire. Plutôt que de l'envoyer tel quel à votre insu, l'appli refuse et vous laisse choisir le partage normal.
 
 **Comment accéder à Android/data ?** Installez Shizuku, démarrez-le (Options pour les développeurs → Débogage sans fil, l'appli Shizuku guide), puis dans Fichiers 6b : menu → *Android/data (Shizuku)*. À refaire après chaque redémarrage du téléphone (limite d'Android).
 
@@ -248,7 +261,7 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.8 : `3ccb72026343bb72ca1494da23cdab256cba34ff4b78e3c8ec715333249c697d`
+- Empreinte SHA-256 de l'APK 1.9 : `5876b4bad42da143ed80555615375d20ec14b931b1f56aeffb80dee727247177` (aussi publiée sur la page de la [version 1.9](https://github.com/alexter13/fichiers-6b/releases/tag/v1.9))
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">
