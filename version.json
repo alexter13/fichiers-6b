@@ -1,7 +1,7 @@
 {
-  "version": "1.7",
+  "version": "1.8",
   "apk": "Fichiers6b.apk",
-  "size": 9003696,
-  "sha256": "a98446835e3a29375e9d2154d4c28d5cbc1343dde61cd2e0d98561f4c7e053cf",
-  "notes": "- Envoi de fichiers d'un téléphone à l'autre par QR code, par le Wi-Fi, sans Internet ni compte (fonctionne aussi vers un iPhone).\n- Parcourir les 7z, RAR et TAR comme un dossier, sans tout extraire.\n- RAR 5 et RAR 7 pris en charge, y compris avec mot de passe.\n- Création d'archives 7z et TAR.GZ en plus du ZIP.\n- Sauvegarde automatique : option « Libérer de l'espace » (fichiers sauvegardés et vérifiés sur le serveur retirés du téléphone après 30 à 365 jours)."
+  "size": 9127781,
+  "sha256": "3ccb72026343bb72ca1494da23cdab256cba34ff4b78e3c8ec715333249c697d",
+  "notes": "- Audit de sécurité du réseau local (SMBv1, partages sans mot de passe, Telnet, FTP anonyme, SNMP public, RDP sans NLA, certificats...) avec rapport.\n- Outils réseau : ping, ports, DNS, Wi-Fi, réveil à distance des PC.\n- Partager sans métadonnées (GPS, appareil, auteur) : photos, Office, PDF.\n- Analyse d'un APK avant installation (signature, autorisations sensibles).\n- Changer de téléphone : tout transférer par QR code, fichiers remis à leur place.\n- Rangement automatique par règles.\n- Raccourcis et tuiles des réglages rapides.\n- Google Drive : renouvellement de l'autorisation en un geste."
 }

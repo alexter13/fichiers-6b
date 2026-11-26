@@ -16,7 +16,19 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ---
 
-## 🆕 Nouveautés de la version 1.7
+## 🆕 Nouveautés de la version 1.8
+
+- 🛡️ **Audit de sécurité du réseau local** (depuis la découverte du réseau) : Telnet et FTP en clair, FTP anonyme, **SMBv1**, signature SMB non exigée, **partages accessibles sans mot de passe** (et modifiables), SNMP « public », bureau à distance sans NLA, VNC, Redis, MQTT, Elasticsearch et API Docker sans authentification, TLS 1.0/1.1, certificats expirés, SHA-1 ou RSA 1024. Gravité, correction proposée et **rapport partageable**. Vérifications en lecture seule, sans essai de mot de passe
+- 🧰 **Outils réseau de terrain** : ping, test de ports avec bannières, **DNS** (A, AAAA, MX, TXT, NS, CNAME, PTR, SRV, CAA, sur le serveur de votre choix), **informations Wi-Fi** (canal, signal, norme, sécurité, réseaux voisins et canal le moins encombré), **réveil à distance des PC** (Wake-on-LAN)
+- 📍 **Partager sans métadonnées** : position GPS, appareil, numéro de série, dates et auteur retirés des photos (JPEG, PNG, WebP, HEIC) **sans recompression**, auteur, société et auteurs des commentaires retirés des documents Word, Excel, PowerPoint, LibreOffice et PDF. L'original reste intact
+- 🔍 **Analyse d'un APK avant installation** : éditeur et certificat de signature, autorisations sensibles, capacités à risque (accessibilité, administrateur, lecture des SMS...), **alerte si la signature diffère de l'appli déjà installée** (contrefaçon), comparaison avec l'empreinte publiée par l'éditeur
+- 📱 **Changer de téléphone** : connexions, favoris, réglages, sauvegardes auto, **coffre-fort** (chiffrés) et dossiers choisis (photos, documents, WhatsApp...) transférés par QR code ; sur le nouveau téléphone chaque fichier retrouve son dossier et sa date, les fichiers déjà présents sont ignorés
+- 🧹 **Rangement automatique** : règles simples (dossier, type, ancienneté, nom) pour trier les Téléchargements par type, envoyer à la corbeille les vieilles captures d'écran ou APK, etc. Aperçu avant de lancer, exécution quotidienne en option, rien n'est supprimé définitivement
+- ⚡ **Raccourcis** : tuiles des réglages rapides (Partage Wi-Fi, Recevoir par QR, Coffre-fort) et raccourcis par appui long sur l'icône
+- ☁️ **Google Drive** : l'expiration de l'autorisation (7 jours tant que l'appli est en test chez Google) est détectée ; une notification et un bouton « Renouveler » relancent les sauvegardes en un geste
+- ✅ L'empreinte d'un fichier est vérifiée automatiquement si vous avez copié celle publiée par l'éditeur
+
+### Version 1.7
 
 - 📲 **Envoyer des fichiers d'un téléphone à l'autre par QR code** : sélectionnez, l'écran affiche un QR code, l'autre téléphone le scanne et reçoit tout par le Wi-Fi, sans Internet, sans compte et sans câble. Fonctionne aussi vers un **iPhone** ou un téléphone sans l'appli (une page de téléchargement s'ouvre, avec un bouton « Tout télécharger »)
 - 🗜️ **Parcourir les 7z, RAR et TAR comme un dossier** : ouvrir une photo ou un document sans tout extraire (7z, RAR, TAR, TAR.GZ, TAR.BZ2, TAR.XZ, GZ, BZ2, XZ)
@@ -109,7 +121,9 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **Éditeur de texte** intégré (txt, log, json, xml, scripts…) avec recherche
 - **Visionneuse d'images** : balayage, zoom au pincement
 - **Propriétés** détaillées : taille, droits, emplacement
-- **Empreintes MD5, SHA-1, SHA-256, SHA-512** avec comparaison (vérifier un téléchargement)
+- **Empreintes MD5, SHA-1, SHA-256, SHA-512** calculées en une lecture, comparées automatiquement à l'empreinte copiée (vérifier un téléchargement)
+- **Partager sans métadonnées** (GPS, appareil, auteur...) : photos, documents Office et PDF
+- **Analyse d'un APK** : signataire, autorisations sensibles, cohérence avec l'appli installée
 - **Recherche** dans tous les sous-dossiers, avec jokers `*` `?` et recherche dans le contenu des fichiers texte
 - **Gros fichiers** : les 200 fichiers qui prennent le plus de place
 - **Doublons** : détection des fichiers identiques pour libérer de l'espace
@@ -132,6 +146,8 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **SFTP** (SSH) : mot de passe ou clé privée
 - **FTPS / FTP**
 - **Découverte du réseau** : détection automatique des NAS et serveurs du Wi-Fi (SMB, SFTP, FTP, WebDAV) et **liste des partages** d'un serveur, connexion pré-remplie en un geste
+- **Audit de sécurité** des appareils détectés (une vingtaine de vérifications, rapport Markdown à partager ou enregistrer)
+- **Outils réseau** : ping, ports, DNS, Wi-Fi, réveil à distance
 - **Envoi vers un téléphone par QR code** : le destinataire scanne et reçoit les fichiers par le Wi-Fi (avec Fichiers 6b : dossier « Téléchargements/Fichiers 6b reçus » ; sans l'appli ou sur iPhone : page de téléchargement). Adresse secrète à usage unique (jeton 128 bits), seuls les fichiers choisis sont visibles, arrêt automatique après 15 min d'inactivité
 - **Partage Wi-Fi vers PC** : récupérez (et déposez) des fichiers du téléphone depuis le navigateur d'un ordinateur, sans câble ni logiciel
 - Copier et déplacer **entre tous les emplacements** : téléphone ↔ Drive ↔ Nextcloud ↔ NAS ↔ serveur
@@ -151,6 +167,8 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 ### 📲 Transfert et sauvegarde
 - **Export de la configuration** (connexions avec mots de passe, favoris, réglages, sauvegardes automatiques) dans un fichier `.f6b` chiffré **AES-256-GCM** (clé dérivée du mot de passe par PBKDF2, 600 000 itérations)
 - **Sauvegarde du coffre-fort** en ZIP chiffré AES-256, restauration directe dans le coffre
+- **Changer de téléphone** : tout transférer vers le nouveau téléphone par QR code (configuration et coffre chiffrés, fichiers remis à leur place)
+- **Rangement automatique** par règles (tri par type, déplacement, corbeille des fichiers anciens)
 
 ### 📂 Android/data et Android/obb (Shizuku)
 - Depuis Android 11, ces dossiers sont interdits à tous les explorateurs ; avec l'application gratuite **Shizuku** (démarrée par le débogage sans fil, sans root), Fichiers 6b peut les parcourir, copier et modifier
@@ -166,6 +184,7 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 ### 🔗 Intégration Android
 - Sert de **sélecteur de fichiers** pour les autres applications
 - Reçoit les fichiers **partagés** depuis n'importe quelle application
+- **Tuiles des réglages rapides** et **raccourcis** de l'icône (Recevoir par QR, Partage Wi-Fi, Coffre-fort, Outils réseau)
 
 ---
 
@@ -174,6 +193,8 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'éditeur (application en phase de test auprès de Google). **Demandez l'ajout de votre adresse Gmail à 6bernova.**
 
 À la première connexion, Google affiche « Google n'a pas validé cette application » : touchez **Continuer**. Toutes les autres fonctions marchent sans aucune inscription.
+
+Tant que l'application est en test chez Google, **l'autorisation expire au bout de 7 jours**. Fichiers 6b vous prévient la veille, met les sauvegardes Drive en pause si elle a expiré et propose **« Renouveler »** (accueil ou notification) : un geste suffit, les sauvegardes reprennent aussitôt.
 
 ---
 
@@ -217,13 +238,17 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 
 **Mes RAR ne s'ouvrent pas ?** Depuis la 1.7, tous les formats RAR sont lus (RAR 1.5 à RAR 7). Seule exception : les archives créées avec un dictionnaire géant (option WinRAR 7 de plus d'1 Go) dépassent la mémoire d'un téléphone ; un message l'indique clairement.
 
+**Pourquoi l'appli peut demander la « Position » ?** Uniquement dans Outils réseau > Wi-Fi, si vous voulez voir le nom du réseau connecté : Android le cache sans cette autorisation. Elle n'est jamais demandée ailleurs et aucune position n'est enregistrée. La liste des réseaux voisins utilise, depuis Android 13, l'autorisation « Appareils à proximité » déclarée sans localisation.
+
+**L'audit de sécurité est-il risqué pour mes appareils ?** Non : il ne fait que des lectures (bannières, négociations de protocole, accès invité ou anonyme, communautés SNMP par défaut) et n'essaie aucun mot de passe. N'auditez qu'un réseau qui vous appartient ou pour lequel vous avez une autorisation.
+
 **Pourquoi l'appli demande l'accès à l'appareil photo ?** Uniquement pour scanner le QR code d'un envoi entre téléphones, au moment où vous appuyez sur « Scanner ». Le scanner est intégré (ZXing) : il fonctionne hors ligne et n'utilise pas les services Google.
 
 ---
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.7 : `a98446835e3a29375e9d2154d4c28d5cbc1343dde61cd2e0d98561f4c7e053cf`
+- Empreinte SHA-256 de l'APK 1.8 : `3ccb72026343bb72ca1494da23cdab256cba34ff4b78e3c8ec715333249c697d`
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">
