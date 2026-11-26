@@ -8,7 +8,7 @@
 
 Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](https://www.6bernova.fun)
 
-### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/raw/main/Fichiers6b.apk) 👈
+### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/releases/latest/download/Fichiers6b.apk) 👈
 
 *Lien direct, toujours la dernière version (actuellement **1.9**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
 
@@ -93,7 +93,7 @@ La plupart des explorateurs de fichiers gratuits du Play Store se financent par 
 
 ## 📥 Installation
 
-1. Sur le téléphone, touchez **[Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/raw/main/Fichiers6b.apk)** : le fichier `Fichiers6b.apk` se télécharge.
+1. Sur le téléphone, touchez **[Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/releases/latest/download/Fichiers6b.apk)** : le fichier `Fichiers6b.apk` se télécharge.
 2. Ouvrez le fichier téléchargé (notification ou dossier **Téléchargements**).
 3. Si Android le demande, autorisez votre navigateur à **installer des applications inconnues**, puis revenez en arrière et touchez **Installer**.
 4. Si **Google Play Protect** affiche un avertissement (normal pour une application hors Play Store) : touchez **Plus de détails** → **Installer quand même**.
@@ -261,7 +261,7 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.9 : `5876b4bad42da143ed80555615375d20ec14b931b1f56aeffb80dee727247177`
+- Empreinte SHA-256 de l'APK 1.9 : `5876b4bad42da143ed80555615375d20ec14b931b1f56aeffb80dee727247177` (aussi affichée sur la page de la [version 1.9](https://github.com/alexter13/fichiers-6b/releases/tag/v1.9))
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">
