@@ -1,7 +1,7 @@
 {
-  "version": "1.5",
+  "version": "1.6",
   "apk": "Fichiers6b.apk",
-  "size": 8743760,
-  "sha256": "7b47cabe7ddbfc11e5a348746a05ba54c24f19b276548629b3e5415d1ea575f4",
-  "notes": "- Sauvegarde automatique des photos et documents vers NAS (SMB), Nextcloud/WebDAV, SFTP, FTPS ou Google Drive : Wi-Fi seul, en charge, 1 à 24 h, rien n'est jamais supprimé.\n- Nettoyeur : dossiers vides, caches de miniatures, fichiers temporaires, APK déjà installés, vieux téléchargements.\n- Changement de téléphone : export/import chiffré de la configuration (connexions, favoris, réglages).\n- Coffre-fort : sauvegarde en ZIP AES-256 et restauration directe.\n- Confidentialité : médias du coffre et des serveurs lus dans l'appli, copies déchiffrées effacées à la sortie, notifications masquées sur l'écran verrouillé.\n- Partage Wi-Fi et découverte réseau en mode point d'accès."
+  "size": 8809524,
+  "sha256": "c0a275cd1926591b0bf3fb2279215e357f144f0f2325d1449ca07d03fc334837",
+  "notes": "- Vidéos et musiques du NAS (SMB, SFTP, FTPS, WebDAV, Drive) et du coffre lues en continu, sans téléchargement préalable.\n- Miniatures des photos des serveurs, gardées en cache.\n- Fichier du serveur modifié dans Word/Excel : renvoi proposé au retour (sans écraser une version modifiée entre-temps).\n- Accès à Android/data et Android/obb sans root via Shizuku.\n- Découverte réseau : noms NetBIOS et Bonjour, box identifiée, type d'appareil, interface d'administration, balayage plus rapide.\n- Sauvegardes fiables : aide pour l'économie de batterie (Xiaomi, Huawei, Samsung, Oppo, Vivo).\n- Journal d'erreurs local : rien n'est envoyé sans votre accord."
 }

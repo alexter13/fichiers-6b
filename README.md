@@ -10,13 +10,23 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/raw/main/Fichiers6b.apk) 👈
 
-*Lien direct, toujours la dernière version (actuellement **1.5**) · Android 8.0 ou plus récent · 8,3 Mo*
+*Lien direct, toujours la dernière version (actuellement **1.6**) · Android 8.0 ou plus récent · 8,4 Mo*
 
 </div>
 
 ---
 
-## 🆕 Nouveautés de la version 1.5
+## 🆕 Nouveautés de la version 1.6
+
+- 🎬 **Vidéos et musiques du NAS lues en continu** (SMB, SFTP, FTPS, WebDAV, Google Drive, coffre-fort) : lecture immédiate et avance rapide, sans télécharger le fichier
+- 🖼️ **Miniatures des photos du NAS, de Nextcloud ou du serveur SFTP**, gardées en cache (150 Mo max)
+- ✏️ **Modifier un fichier du serveur avec Word, Excel ou toute autre appli** : à votre retour, Fichiers 6b propose de renvoyer la nouvelle version (sans jamais écraser une version modifiée entre-temps sur le serveur)
+- 📂 **Accès à `Android/data` et `Android/obb` sans root** grâce à Shizuku (sauvegardes de jeux, fichiers d'applications)
+- 📡 **Détection du réseau local améliorée** : noms des PC et NAS (NetBIOS et Bonjour/mDNS), box identifiée, type d'appareil reconnu (NAS, Proxmox, PC Windows, Mac, imprimante, serveur Linux...), accès direct à l'interface d'administration, balayage beaucoup plus rapide
+- 🔋 **Sauvegardes fiables sur Xiaomi, Huawei, Samsung, Oppo, Vivo** : détection de l'économie de batterie et accès direct aux bons réglages
+- 🧾 **Journal d'erreurs local** : en cas de problème, le rapport reste sur le téléphone ; vous le lisez et décidez de l'envoyer ou non
+
+### Version 1.5
 
 - 💾 **Sauvegarde automatique** de vos photos et documents vers votre **NAS, Nextcloud, serveur SFTP ou Google Drive** : en Wi-Fi seulement, en charge si vous voulez, toutes les 1 à 24 h ; seuls les fichiers nouveaux ou modifiés partent, rien n'est jamais supprimé
 - 🧹 **Nettoyeur** : dossiers vides, caches de miniatures, fichiers temporaires, APK déjà installés, vieux téléchargements — avec aperçu avant suppression
@@ -132,6 +142,10 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **Export de la configuration** (connexions avec mots de passe, favoris, réglages, sauvegardes automatiques) dans un fichier `.f6b` chiffré **AES-256-GCM** (clé dérivée du mot de passe par PBKDF2, 600 000 itérations)
 - **Sauvegarde du coffre-fort** en ZIP chiffré AES-256, restauration directe dans le coffre
 
+### 📂 Android/data et Android/obb (Shizuku)
+- Depuis Android 11, ces dossiers sont interdits à tous les explorateurs ; avec l'application gratuite **Shizuku** (démarrée par le débogage sans fil, sans root), Fichiers 6b peut les parcourir, copier et modifier
+- Parcours guidé : installation, démarrage, autorisation
+
 ### 📊 Analyse du stockage
 - **Carte proportionnelle** (treemap) : chaque dossier est un rectangle à la taille de ce qu'il occupe ; touchez pour descendre dans l'arborescence
 
@@ -162,6 +176,7 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 - 🕶️ **Mode confidentiel** : pas de capture d'écran, aperçu masqué dans les applications récentes
 - 🧾 **Identité des serveurs vérifiée** : empreinte de la clé SSH et du certificat TLS (FTPS, WebDAV) présentée à la première connexion ; alerte rouge et connexion bloquée si elle change (protection contre l'interception)
 - ⚠️ Avertissement clair pour les protocoles non chiffrés (FTP, WebDAV en http://)
+- 🧾 **Journal d'erreurs 100 % local** : aucun envoi automatique, le rapport n'est transmis que si vous le décidez, après l'avoir lu
 - 🦠 **Vérification VirusTotal** : seule l'empreinte SHA-256 du fichier est consultée, le fichier n'est jamais envoyé
 - 📦 **Mises à jour vérifiées** : empreinte SHA-256 et certificat de signature contrôlés avant chaque installation
 - Google Drive : connexion officielle via les services Google ; aucun mot de passe ne transite par l'application
@@ -182,6 +197,10 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 
 **Comment changer de téléphone ?** Réglages → *Exporter la configuration* et *Sauvegarder le coffre-fort* : copiez les deux fichiers sur le nouveau téléphone, installez Fichiers 6b, puis ouvrez-les depuis l'explorateur.
 
+**Comment accéder à Android/data ?** Installez Shizuku, démarrez-le (Options pour les développeurs → Débogage sans fil, l'appli Shizuku guide), puis dans Fichiers 6b : menu → *Android/data (Shizuku)*. À refaire après chaque redémarrage du téléphone (limite d'Android).
+
+**Les sauvegardes ne partent pas sur mon Xiaomi / Samsung ?** Ouvrez *Sauvegarde automatique* : un encadré indique si l'économie de batterie bloque l'appli et ouvre directement le bon réglage.
+
 **La sauvegarde automatique supprime-t-elle quelque chose ?** Jamais : elle ne fait qu'ajouter ou mettre à jour des fichiers sur la destination.
 
 **Le partage Wi-Fi est-il sûr ?** Il n'est accessible que depuis votre réseau local, protégé par un mot de passe aléatoire renouvelé à chaque démarrage, et s'arrête seul après 30 minutes d'inactivité. Le trafic n'étant pas chiffré, ne l'utilisez pas sur un Wi-Fi public.
@@ -192,7 +211,7 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.5 : `7b47cabe7ddbfc11e5a348746a05ba54c24f19b276548629b3e5415d1ea575f4`
+- Empreinte SHA-256 de l'APK 1.6 : `c0a275cd1926591b0bf3fb2279215e357f144f0f2325d1449ca07d03fc334837`
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">
