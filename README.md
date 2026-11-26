@@ -10,13 +10,22 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/raw/main/Fichiers6b.apk) 👈
 
-*Lien direct, toujours la dernière version (actuellement **1.4**) · Android 8.0 ou plus récent · 8,2 Mo*
+*Lien direct, toujours la dernière version (actuellement **1.5**) · Android 8.0 ou plus récent · 8,3 Mo*
 
 </div>
 
 ---
 
-## 🆕 Nouveautés de la version 1.4 — sécurité renforcée
+## 🆕 Nouveautés de la version 1.5
+
+- 💾 **Sauvegarde automatique** de vos photos et documents vers votre **NAS, Nextcloud, serveur SFTP ou Google Drive** : en Wi-Fi seulement, en charge si vous voulez, toutes les 1 à 24 h ; seuls les fichiers nouveaux ou modifiés partent, rien n'est jamais supprimé
+- 🧹 **Nettoyeur** : dossiers vides, caches de miniatures, fichiers temporaires, APK déjà installés, vieux téléchargements — avec aperçu avant suppression
+- 📲 **Changement de téléphone facilité** : export de toute la configuration (connexions, favoris, réglages, sauvegardes) dans un fichier chiffré
+- 🔐 **Sauvegarde du coffre-fort** en ZIP AES-256 et **restauration** en un geste (« Extraire dans le coffre-fort »)
+- 🕶️ **Confidentialité renforcée** : photos, vidéos et musiques du coffre (ou d'un serveur) lues **dans l'appli**, copies déchiffrées effacées dès que vous la quittez, noms de fichiers masqués dans les notifications de l'écran verrouillé
+- 📶 Partage Wi-Fi et découverte réseau fonctionnent aussi quand le téléphone sert de **point d'accès**
+
+### Version 1.4 — sécurité renforcée
 
 - 🔐 **Coffre-fort chiffré** (AES-256-GCM) déverrouillé par empreinte, visage ou code
 - 🔑 **Verrouillage de l'application** et **mots de passe protégés par biométrie**
@@ -108,6 +117,21 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **Partage Wi-Fi vers PC** : récupérez (et déposez) des fichiers du téléphone depuis le navigateur d'un ordinateur, sans câble ni logiciel
 - Copier et déplacer **entre tous les emplacements** : téléphone ↔ Drive ↔ Nextcloud ↔ NAS ↔ serveur
 
+### 💾 Sauvegarde automatique
+- Choisissez un dossier (Appareil photo, Captures d'écran, Documents, Téléchargements ou n'importe quel dossier) et une destination (NAS SMB, SFTP, FTPS, WebDAV/Nextcloud, Google Drive)
+- Fréquence de 1 à 24 h, **Wi-Fi uniquement** et **en charge uniquement** en option, batterie faible respectée
+- Envoi **incrémental** (seuls les nouveaux fichiers ou modifiés), écriture sous nom temporaire puis renommage : jamais de fichier tronqué sur le serveur
+- **Aucune suppression**, ni sur le téléphone ni sur le serveur ; bilan affiché après chaque passage
+
+### 🧹 Nettoyeur
+- Dossiers vides, caches de miniatures (`.thumbnails`), fichiers temporaires et téléchargements interrompus, verrous Office, `Thumbs.db`
+- APK dont l'application est déjà installée, anciens gros téléchargements (à vérifier, non cochés par défaut)
+- Aperçu détaillé avant de nettoyer ; APK et téléchargements passent par la corbeille
+
+### 📲 Transfert et sauvegarde
+- **Export de la configuration** (connexions avec mots de passe, favoris, réglages, sauvegardes automatiques) dans un fichier `.f6b` chiffré **AES-256-GCM** (clé dérivée du mot de passe par PBKDF2, 600 000 itérations)
+- **Sauvegarde du coffre-fort** en ZIP chiffré AES-256, restauration directe dans le coffre
+
 ### 📊 Analyse du stockage
 - **Carte proportionnelle** (treemap) : chaque dossier est un rectangle à la taille de ce qu'il occupe ; touchez pour descendre dans l'arborescence
 
@@ -142,7 +166,7 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 - 📦 **Mises à jour vérifiées** : empreinte SHA-256 et certificat de signature contrôlés avant chaque installation
 - Google Drive : connexion officielle via les services Google ; aucun mot de passe ne transite par l'application
 
-> ⚠️ Le coffre-fort est stocké dans l'espace privé de l'application : **désinstaller l'application ou effacer ses données détruit définitivement le coffre**. Sortez-en vos fichiers avant.
+> ⚠️ Le coffre-fort est stocké dans l'espace privé de l'application : **désinstaller l'application ou effacer ses données détruit définitivement le coffre**. Faites régulièrement une *sauvegarde du coffre-fort* (Réglages) et gardez-la hors du téléphone.
 
 ---
 
@@ -156,6 +180,10 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 
 **Puis-je voir le dossier `Android/data` ?** Non : Android le réserve au système depuis la version 11, pour tous les explorateurs (sauf téléphone rooté).
 
+**Comment changer de téléphone ?** Réglages → *Exporter la configuration* et *Sauvegarder le coffre-fort* : copiez les deux fichiers sur le nouveau téléphone, installez Fichiers 6b, puis ouvrez-les depuis l'explorateur.
+
+**La sauvegarde automatique supprime-t-elle quelque chose ?** Jamais : elle ne fait qu'ajouter ou mettre à jour des fichiers sur la destination.
+
 **Le partage Wi-Fi est-il sûr ?** Il n'est accessible que depuis votre réseau local, protégé par un mot de passe aléatoire renouvelé à chaque démarrage, et s'arrête seul après 30 minutes d'inactivité. Le trafic n'étant pas chiffré, ne l'utilisez pas sur un Wi-Fi public.
 
 **Mes RAR ne s'ouvrent pas ?** Seul le format RAR 4 est pris en charge (le format RAR 5 est propriétaire). Les ZIP et 7z sont lus intégralement.
@@ -164,7 +192,7 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.4 : `89281c8dfe8d0595d703729dc3a713c8da3551c184d9845dc7808a496adc1107`
+- Empreinte SHA-256 de l'APK 1.5 : `7b47cabe7ddbfc11e5a348746a05ba54c24f19b276548629b3e5415d1ea575f4`
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">

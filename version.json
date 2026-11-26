@@ -1,7 +1,7 @@
 {
-  "version": "1.4",
+  "version": "1.5",
   "apk": "Fichiers6b.apk",
-  "size": 8593314,
-  "sha256": "89281c8dfe8d0595d703729dc3a713c8da3551c184d9845dc7808a496adc1107",
-  "notes": "- Sécurité : coffre-fort chiffré AES-256, verrouillage par empreinte/visage/code, mots de passe protégés par biométrie, mode confidentiel.\n- Identité des serveurs vérifiée (SSH, FTPS, WebDAV) avec alerte en cas de changement ; avertissement FTP non chiffré.\n- Nouveau : WebDAV (Nextcloud, kDrive, pCloud, NAS), découverte du réseau et des partages SMB, partage Wi-Fi vers PC.\n- Archives 7z, RAR 4, TAR.GZ/BZ2/XZ avec protection contre les archives piégées.\n- Analyse du stockage (carte), lecteurs PDF et audio/vidéo intégrés, vérification VirusTotal.\n- Mises à jour vérifiées : empreinte SHA-256 et certificat de signature contrôlés avant installation."
+  "size": 8743760,
+  "sha256": "7b47cabe7ddbfc11e5a348746a05ba54c24f19b276548629b3e5415d1ea575f4",
+  "notes": "- Sauvegarde automatique des photos et documents vers NAS (SMB), Nextcloud/WebDAV, SFTP, FTPS ou Google Drive : Wi-Fi seul, en charge, 1 à 24 h, rien n'est jamais supprimé.\n- Nettoyeur : dossiers vides, caches de miniatures, fichiers temporaires, APK déjà installés, vieux téléchargements.\n- Changement de téléphone : export/import chiffré de la configuration (connexions, favoris, réglages).\n- Coffre-fort : sauvegarde en ZIP AES-256 et restauration directe.\n- Confidentialité : médias du coffre et des serveurs lus dans l'appli, copies déchiffrées effacées à la sortie, notifications masquées sur l'écran verrouillé.\n- Partage Wi-Fi et découverte réseau en mode point d'accès."
 }
