@@ -1,8 +1,8 @@
 {
-  "version": "2.0",
+  "version": "2.0.1",
   "apk": "Fichiers6b.apk",
-  "url": "https://github.com/alexter13/fichiers-6b/releases/download/v2.0/Fichiers6b.apk",
-  "size": 8045888,
-  "sha256": "7f7899cd135afd7d8cfa28ec45224573e4e332d0ccbe84f703d22305b1fa2a6a",
-  "notes": "- Sauvegarde complète du téléphone vers Google Drive, un NAS (SMB) ou un serveur (SFTP, FTPS, WebDAV) : dossiers choisis, connexions et réglages, coffre-fort.\n- Seules les nouveautés sont envoyées ; rien n'est jamais effacé de la sauvegarde.\n- Automatique chaque jour ou chaque semaine (Wi-Fi, en charge), ou à la demande.\n- Restauration sur un nouveau téléphone : bandeau « Restaurer » dans le dossier de la sauvegarde, chaque fichier retrouve son dossier et sa date.\n- Connexions et coffre-fort chiffrés par votre mot de passe de sauvegarde.\n- SMB et FTPS : la date d'origine des fichiers envoyés est désormais conservée."
+  "url": "https://github.com/alexter13/fichiers-6b/releases/download/v2.0.1/Fichiers6b.apk",
+  "size": 8046524,
+  "sha256": "d563de61b34e444444d3104ba606957ead5c10af151a883b635a3c69be0e0a86",
+  "notes": "- Sauvegarde du téléphone : dates d'origine restaurées sur tous les serveurs, WebDAV compris.\n- Taille exacte de la sauvegarde affichée et espace libre vérifié avant de restaurer.\n- Un fichier refusé par le serveur n'empêche plus la restauration.\n- Google Drive et WebDAV : « Arrêter » immédiat, plus de fichier tronqué sur la destination.\n- Coffre ou configuration illisibles : photos et documents sauvegardés quand même.\n- Android 12+ : données de l'appli exclues de l'assistant de copie Google (mots de passe liés au téléphone)."
 }
