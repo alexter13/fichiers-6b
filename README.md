@@ -10,13 +10,21 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/releases/latest/download/Fichiers6b.apk) 👈
 
-*Lien direct, toujours la dernière version (actuellement **1.9**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
+*Lien direct, toujours la dernière version (actuellement **2.0**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
 
 </div>
 
 ---
 
-## 🆕 Nouveautés de la version 1.9
+## 🆕 Nouveautés de la version 2.0
+
+- 💾 **Sauvegarde complète du téléphone** (Accueil → *Sauvegarde du téléphone*) vers **Google Drive**, votre NAS (SMB), un serveur SFTP / FTPS ou WebDAV (Nextcloud...) : dossiers choisis (appareil photo, images, documents, enregistrements, WhatsApp...), **connexions, favoris et réglages**, **coffre-fort**. Configuration et coffre partent **chiffrés par votre mot de passe** (AES-256)
+- 🔁 **Seules les nouveautés sont envoyées**, automatiquement chaque jour ou chaque semaine (en Wi-Fi, pendant la charge si vous le souhaitez), ou à la demande. Rien n'est jamais effacé de la sauvegarde
+- 📲 **Restauration sur un autre téléphone** : ouvrez le dossier de la sauvegarde dans Fichiers 6b, un bandeau **« Restaurer »** apparaît. Chaque fichier retrouve son dossier et **sa date d'origine** (galerie dans le bon ordre) ; rien de ce qui est déjà sur le téléphone n'est écrasé ; connexions et coffre-fort sont réimportés avec le mot de passe
+- 🕒 **Dates conservées en SMB et FTPS** : les fichiers envoyés vers un NAS ou un serveur FTPS (sauvegardes automatiques comprises) gardent désormais leur date de modification
+- ☁️ Google Drive : si l'autorisation expire (7 jours tant que l'appli est en test chez Google), la sauvegarde se met en pause et repart d'elle-même dès que vous touchez « Renouveler »
+
+### Version 1.9
 
 - 📄 **PDF vraiment nettoyés avant partage** (« Partager sans métadonnées ») : le fichier est réécrit, ce qui atteint aussi les informations rangées dans les parties compressées. Sont retirés : titre, auteur, sujet, mots-clés, logiciels, dates, champs personnalisés (société...), **toutes les métadonnées XMP**, données privées des logiciels de mise en page (Illustrator, Photoshop...), **auteurs des commentaires et surlignages** (remplacés par « Auteur ») ; l'identifiant interne du fichier est renouvelé. Texte, pages, champs de formulaire et pièces jointes sont conservés
 - 📷 **Photos intégrées aux PDF** (applis de numérisation, exports d'images) : position GPS, appareil, numéros de série et dates de prise de vue retirés de chaque photo, **sans recompression**
@@ -177,6 +185,7 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **Export de la configuration** (connexions avec mots de passe, favoris, réglages, sauvegardes automatiques) dans un fichier `.f6b` chiffré **AES-256-GCM** (clé dérivée du mot de passe par PBKDF2, 600 000 itérations)
 - **Sauvegarde du coffre-fort** en ZIP chiffré AES-256, restauration directe dans le coffre
 - **Changer de téléphone** : tout transférer vers le nouveau téléphone par QR code (configuration et coffre chiffrés, fichiers remis à leur place)
+- **Sauvegarde du téléphone** vers Google Drive, NAS ou serveur (incrémentale, automatique ou à la demande) et **restauration** sur n'importe quel téléphone
 - **Rangement automatique** par règles (tri par type, déplacement, corbeille des fichiers anciens)
 
 ### 📂 Android/data et Android/obb (Shizuku)
@@ -235,7 +244,9 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 **Puis-je voir le dossier `Android/data` ?** Android le réserve au système depuis la version 11, pour tous les explorateurs. Fichiers 6b y accède quand même grâce à Shizuku (voir ci-dessous), sans rooter le téléphone.
 
-**Comment changer de téléphone ?** Installez Fichiers 6b sur le nouveau téléphone. Sur l'ancien : Accueil → *Changer de téléphone*, cochez ce qu'il faut transférer (dossiers, connexions, coffre-fort) ; sur le nouveau : *Recevoir (QR)* et scannez le code. Chaque fichier retrouve son dossier et sa date.
+**Comment changer de téléphone ?** Deux façons. Les deux téléphones côte à côte : sur l'ancien, Accueil → *Changer de téléphone* ; sur le nouveau, *Recevoir (QR)* et scannez le code (même Wi-Fi, sans Internet). Ou à distance : *Sauvegarde du téléphone* vers Google Drive ou votre NAS, puis sur le nouveau téléphone ouvrez le dossier de la sauvegarde et touchez « Restaurer ». Dans les deux cas, chaque fichier retrouve son dossier et sa date.
+
+**La sauvegarde du téléphone remplace-t-elle celle de Google ?** Non, elle la complète : Android ne permet à aucune application de copier les données internes des autres applis (conversations, SMS, contacts). La sauvegarde Google du téléphone s'en charge ; Fichiers 6b sauvegarde vos fichiers (photos, documents, médias WhatsApp...), ses propres réglages et le coffre-fort, là où vous le choisissez.
 
 **Où trouver une ancienne version ?** Sur la page [Releases](https://github.com/alexter13/fichiers-6b/releases) : chaque version y garde son APK, ses notes et son empreinte.
 
@@ -261,7 +272,7 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.9 : `5876b4bad42da143ed80555615375d20ec14b931b1f56aeffb80dee727247177` (aussi affichée sur la page de la [version 1.9](https://github.com/alexter13/fichiers-6b/releases/tag/v1.9))
+- Empreinte SHA-256 de l'APK 2.0 : `7f7899cd135afd7d8cfa28ec45224573e4e332d0ccbe84f703d22305b1fa2a6a` (aussi affichée sur la page de la [version 2.0](https://github.com/alexter13/fichiers-6b/releases/tag/v2.0))
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">

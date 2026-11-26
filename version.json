@@ -1,8 +1,8 @@
 {
-  "version": "1.9",
+  "version": "2.0",
   "apk": "Fichiers6b.apk",
-  "url": "https://github.com/alexter13/fichiers-6b/releases/download/v1.9/Fichiers6b.apk",
-  "size": 8029504,
-  "sha256": "5876b4bad42da143ed80555615375d20ec14b931b1f56aeffb80dee727247177",
-  "notes": "- Partager sans métadonnées : nettoyage complet des PDF (propriétés, XMP, données des logiciels, auteurs des commentaires), y compris les parties compressées.\n- Photos intégrées aux PDF : position GPS, appareil et dates retirés sans recompression.\n- PDF protégé par mot de passe : jamais envoyé sans nettoyage, explication affichée.\n- Toutes les versions sur la page Releases du projet ; mises à jour téléchargées depuis la Release, avec repli automatique.\n- Application plus légère (7,7 Mo au lieu de 8,7 Mo).\n- À propos : liens cliquables et composants à jour."
+  "url": "https://github.com/alexter13/fichiers-6b/releases/download/v2.0/Fichiers6b.apk",
+  "size": 8045888,
+  "sha256": "7f7899cd135afd7d8cfa28ec45224573e4e332d0ccbe84f703d22305b1fa2a6a",
+  "notes": "- Sauvegarde complète du téléphone vers Google Drive, un NAS (SMB) ou un serveur (SFTP, FTPS, WebDAV) : dossiers choisis, connexions et réglages, coffre-fort.\n- Seules les nouveautés sont envoyées ; rien n'est jamais effacé de la sauvegarde.\n- Automatique chaque jour ou chaque semaine (Wi-Fi, en charge), ou à la demande.\n- Restauration sur un nouveau téléphone : bandeau « Restaurer » dans le dossier de la sauvegarde, chaque fichier retrouve son dossier et sa date.\n- Connexions et coffre-fort chiffrés par votre mot de passe de sauvegarde.\n- SMB et FTPS : la date d'origine des fichiers envoyés est désormais conservée."
 }
