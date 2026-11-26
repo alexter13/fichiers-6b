@@ -10,9 +10,22 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/raw/main/Fichiers6b.apk) 👈
 
-*Lien direct, toujours la dernière version (actuellement **1.3**) · Android 8.0 ou plus récent · 5,6 Mo*
+*Lien direct, toujours la dernière version (actuellement **1.4**) · Android 8.0 ou plus récent · 8,2 Mo*
 
 </div>
+
+---
+
+## 🆕 Nouveautés de la version 1.4 — sécurité renforcée
+
+- 🔐 **Coffre-fort chiffré** (AES-256-GCM) déverrouillé par empreinte, visage ou code
+- 🔑 **Verrouillage de l'application** et **mots de passe protégés par biométrie**
+- 🧾 **Vérification de l'identité des serveurs** (empreinte SSH, certificat TLS FTPS/WebDAV) avec alerte en cas de changement
+- ☁️ **WebDAV** : Nextcloud, kDrive, pCloud, NAS
+- 📡 **Découverte du réseau** et liste des partages SMB, **partage Wi-Fi vers PC**
+- 🗜️ **7z, RAR, TAR.GZ/BZ2/XZ** + protection contre les archives piégées
+- 📊 **Analyse du stockage** en carte, **lecteurs PDF et audio/vidéo** intégrés
+- 🦠 Vérification **VirusTotal**, **mode confidentiel**, mises à jour **vérifiées** (SHA-256 + signature)
 
 ---
 
@@ -38,7 +51,7 @@ La plupart des explorateurs de fichiers gratuits du Play Store se financent par 
 4. Si **Google Play Protect** affiche un avertissement (normal pour une application hors Play Store) : touchez **Plus de détails** → **Installer quand même**.
 5. Au premier lancement, touchez **Accorder l'accès** puis activez **Accès à tous les fichiers**. Cette autorisation est indispensable à tout explorateur de fichiers sur Android 11 et plus.
 
-### 🔄 Mises à jour automatiques
+#### 🔄 Mises à jour automatiques
 
 Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l'application vous prévient elle-même** (« Mise à jour disponible ») et l'installe en un geste. Vos réglages, connexions et favoris sont conservés.
 
@@ -75,17 +88,28 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **Doublons** : détection des fichiers identiques pour libérer de l'espace
 - **Applications installées** : sauvegarder l'APK, partager, désinstaller
 
-### 🗜️ Archives ZIP
-- Parcourir un ZIP comme un dossier, extraire ici ou dans un sous-dossier
+### 🗜️ Archives
+- **ZIP, 7z, RAR 4, TAR, TAR.GZ / TGZ, TAR.BZ2, TAR.XZ, GZ, BZ2, XZ** : extraction ici ou dans un sous-dossier
+- Parcourir un ZIP comme un dossier, ZIP et 7z **protégés par mot de passe**
 - Créer un ZIP, avec **mot de passe AES-256** en option
-- Ouvrir les ZIP protégés par mot de passe
+- **Protection contre les archives piégées** : chemins `../` et liens symboliques bloqués, arrêt automatique des « bombes de décompression » (taux de compression anormal, espace disque insuffisant, nombre d'entrées excessif)
+
+### 🎬 Lecteurs intégrés
+- **Lecteur PDF** (défilement continu, zoom)
+- **Lecteur audio et vidéo** (liste de lecture avec les autres médias du dossier)
 
 ### ☁️ Cloud et réseau
 - **Google Drive** : Mon Drive, Partagés avec moi, Drives partagés ; les Google Docs / Sheets / Slides s'ouvrent en Word / Excel / PowerPoint
+- **WebDAV** : **Nextcloud, ownCloud, kDrive (Infomaniak), pCloud, Koofr, NAS Synology / QNAP**
 - **SMB** : partages Windows et NAS (Synology, QNAP…)
 - **SFTP** (SSH) : mot de passe ou clé privée
-- **FTP / FTPS**
-- Copier et déplacer **entre tous les emplacements** : téléphone ↔ Drive ↔ NAS ↔ serveur
+- **FTPS / FTP**
+- **Découverte du réseau** : détection automatique des NAS et serveurs du Wi-Fi (SMB, SFTP, FTP, WebDAV) et **liste des partages** d'un serveur, connexion pré-remplie en un geste
+- **Partage Wi-Fi vers PC** : récupérez (et déposez) des fichiers du téléphone depuis le navigateur d'un ordinateur, sans câble ni logiciel
+- Copier et déplacer **entre tous les emplacements** : téléphone ↔ Drive ↔ Nextcloud ↔ NAS ↔ serveur
+
+### 📊 Analyse du stockage
+- **Carte proportionnelle** (treemap) : chaque dossier est un rectangle à la taille de ce qu'il occupe ; touchez pour descendre dans l'arborescence
 
 ### 🎨 Personnalisation
 - Thème clair, sombre ou automatique, **6 couleurs d'accent**, couleurs Material You
@@ -108,9 +132,17 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 ## 🔒 Confidentialité et sécurité
 
 - **Aucune donnée collectée**, aucune statistique, aucun traqueur, aucune publicité
-- Mots de passe et clés des connexions **chiffrés (AES-256)** par le coffre-fort sécurisé d'Android (Keystore)
-- SFTP : l'identité du serveur est mémorisée et la connexion refusée si elle change
+- 🔐 **Coffre-fort chiffré** : vos fichiers sensibles chiffrés en **AES-256-GCM** (noms compris), invisibles de la galerie, des autres applications et d'un PC branché en USB ; ouverture par empreinte, visage ou code
+- 🔑 **Verrouillage de l'application** par biométrie ou code de l'appareil, avec délai de reverrouillage réglable
+- 🛡️ **Mots de passe des connexions** chiffrés (AES-256) par le Keystore matériel d'Android, et en option **déchiffrables uniquement après authentification biométrique**
+- 🕶️ **Mode confidentiel** : pas de capture d'écran, aperçu masqué dans les applications récentes
+- 🧾 **Identité des serveurs vérifiée** : empreinte de la clé SSH et du certificat TLS (FTPS, WebDAV) présentée à la première connexion ; alerte rouge et connexion bloquée si elle change (protection contre l'interception)
+- ⚠️ Avertissement clair pour les protocoles non chiffrés (FTP, WebDAV en http://)
+- 🦠 **Vérification VirusTotal** : seule l'empreinte SHA-256 du fichier est consultée, le fichier n'est jamais envoyé
+- 📦 **Mises à jour vérifiées** : empreinte SHA-256 et certificat de signature contrôlés avant chaque installation
 - Google Drive : connexion officielle via les services Google ; aucun mot de passe ne transite par l'application
+
+> ⚠️ Le coffre-fort est stocké dans l'espace privé de l'application : **désinstaller l'application ou effacer ses données détruit définitivement le coffre**. Sortez-en vos fichiers avant.
 
 ---
 
@@ -124,11 +156,15 @@ La connexion à Google Drive est réservée aux comptes Gmail autorisés par l'�
 
 **Puis-je voir le dossier `Android/data` ?** Non : Android le réserve au système depuis la version 11, pour tous les explorateurs (sauf téléphone rooté).
 
+**Le partage Wi-Fi est-il sûr ?** Il n'est accessible que depuis votre réseau local, protégé par un mot de passe aléatoire renouvelé à chaque démarrage, et s'arrête seul après 30 minutes d'inactivité. Le trafic n'étant pas chiffré, ne l'utilisez pas sur un Wi-Fi public.
+
+**Mes RAR ne s'ouvrent pas ?** Seul le format RAR 4 est pris en charge (le format RAR 5 est propriétaire). Les ZIP et 7z sont lus intégralement.
+
 ---
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 1.3 : `9190a07ccf584c270c74d873cfeb3a1c335209ccc22f59f21f1e4384bf5d9535`
+- Empreinte SHA-256 de l'APK 1.4 : `89281c8dfe8d0595d703729dc3a713c8da3551c184d9845dc7808a496adc1107`
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">
