@@ -10,13 +10,19 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/releases/latest/download/Fichiers6b.apk) 👈
 
-*Lien direct, toujours la dernière version (actuellement **2.0.1**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
+*Lien direct, toujours la dernière version (actuellement **2.0.2**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
 
 </div>
 
 ---
 
-## 🆕 Nouveautés de la version 2.0.1
+## 🆕 Nouveautés de la version 2.0.2
+
+- ☁️ **Google Drive reste proposé comme destination** de la sauvegarde du téléphone et des sauvegardes automatiques, même après un redémarrage ou une mise à jour de l'appli (il fallait auparavant l'avoir rouvert depuis l'accueil, sinon la liste des destinations restait vide)
+- 💬 **Un bouton grisé dit toujours pourquoi** : sur l'écran « Sauvegarde du téléphone », le motif s'affiche juste au-dessus (destination à choisir, mot de passe trop court, mots de passe différents, aucun dossier coché)
+- ➕ Boutons **« Connecter Google Drive »** et **« Ajouter un NAS / serveur »** directement dans la section Destination ; une destination supprimée depuis est signalée
+
+### Version 2.0.1
 
 Corrections de la sauvegarde du téléphone, trouvées en revérifiant la 2.0 de bout en bout :
 
@@ -283,7 +289,7 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 2.0.1 : `d563de61b34e444444d3104ba606957ead5c10af151a883b635a3c69be0e0a86` (aussi affichée sur la page de la [version 2.0.1](https://github.com/alexter13/fichiers-6b/releases/tag/v2.0.1))
+- Empreinte SHA-256 de l'APK 2.0.2 : `ad813ab0ad3a585d67923e154c3ad602ba062473c2c644d08d936d4064bab5f1` (aussi affichée sur la page de la [version 2.0.2](https://github.com/alexter13/fichiers-6b/releases/tag/v2.0.2))
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">
