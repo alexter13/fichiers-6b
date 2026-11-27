@@ -10,13 +10,27 @@ Gratuit, complet et respectueux de votre vie privée — édité par [6bernova](
 
 ### 👉 [Télécharger Fichiers 6b](https://github.com/alexter13/fichiers-6b/releases/latest/download/Fichiers6b.apk) 👈
 
-*Lien direct, toujours la dernière version (actuellement **2.0.2**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
+*Lien direct, toujours la dernière version (actuellement **2.0.3**) · Android 8.0 ou plus récent · 7,7 Mo · [toutes les versions](https://github.com/alexter13/fichiers-6b/releases)*
 
 </div>
 
 ---
 
-## 🆕 Nouveautés de la version 2.0.2
+## 🆕 Nouveautés de la version 2.0.3
+
+Sauvegarde du téléphone vers Google Drive, revue de bout en bout contre un simulateur de son API (coupures, quotas, surcharges) :
+
+- 🚀 **Google Drive : sauvegarde beaucoup plus rapide.** La 2.0.2 relisait tout le dossier de destination deux fois par fichier envoyé ; un dossier n'est plus lu qu'une fois, et chaque fichier demande deux requêtes au lieu de quatre
+- 🎬 **Gros fichiers (vidéos) envoyés par blocs, avec reprise** : après une coupure du Wi-Fi, un arrêt de l'appli ou une suspension par Android, l'envoi reprend où il s'était arrêté. Le fichier est lu directement sur le téléphone (il fallait autant d'espace libre que sa taille), « Arrêter » est immédiat et l'avancement s'affiche en pourcentage
+- 📶 **« En Wi-Fi uniquement » vaut aussi pour « Sauvegarder maintenant »** : sans Wi-Fi, la sauvegarde attend et l'écran le dit ; si le Wi-Fi décroche en route, elle se suspend au lieu de continuer en données mobiles
+- 💽 **Drive plein** : prévenu avant de lancer (espace libre comparé à ce qui reste à envoyer) ; en cours de route, arrêt net avec un message clair, et ce qui est déjà envoyé reste restaurable
+- 🔁 Surcharges passagères de Google (429 / 503) : nouvelle tentative automatique
+- ⏱️ **Android 15 et plus** limite à 6 heures par jour les transferts en arrière-plan : la sauvegarde l'indique, continue par étapes et repart à pleine vitesse dès que vous ouvrez l'appli
+- 🔑 Connexion à Google Drive refusée : le motif donné par Google est affiché, au lieu de « Connexion annulée »
+- 📁 **FTP / FTPS** : un envoi refusé par le serveur en fin de transfert (disque plein, quota) n'est plus compté comme réussi
+- 🧹 **Libérer de l'espace** : avant de retirer un fichier du téléphone, sa présence est relue sur le serveur à l'instant
+
+### Version 2.0.2
 
 - ☁️ **Google Drive reste proposé comme destination** de la sauvegarde du téléphone et des sauvegardes automatiques, même après un redémarrage ou une mise à jour de l'appli (il fallait auparavant l'avoir rouvert depuis l'accueil, sinon la liste des destinations restait vide)
 - 💬 **Un bouton grisé dit toujours pourquoi** : sur l'écran « Sauvegarde du téléphone », le motif s'affiche juste au-dessus (destination à choisir, mot de passe trop court, mots de passe différents, aucun dossier coché)
@@ -202,7 +216,7 @@ Inutile de revenir sur cette page : quand une nouvelle version est publiée, **l
 - **Export de la configuration** (connexions avec mots de passe, favoris, réglages, sauvegardes automatiques) dans un fichier `.f6b` chiffré **AES-256-GCM** (clé dérivée du mot de passe par PBKDF2, 600 000 itérations)
 - **Sauvegarde du coffre-fort** en ZIP chiffré AES-256, restauration directe dans le coffre
 - **Changer de téléphone** : tout transférer vers le nouveau téléphone par QR code (configuration et coffre chiffrés, fichiers remis à leur place)
-- **Sauvegarde du téléphone** vers Google Drive, NAS ou serveur (incrémentale, automatique ou à la demande) et **restauration** sur n'importe quel téléphone
+- **Sauvegarde du téléphone** vers Google Drive, NAS ou serveur (incrémentale, automatique ou à la demande, en Wi-Fi uniquement si vous le souhaitez ; sur Google Drive, une grosse vidéo interrompue reprend où elle s'était arrêtée) et **restauration** sur n'importe quel téléphone
 - **Rangement automatique** par règles (tri par type, déplacement, corbeille des fichiers anciens)
 
 ### 📂 Android/data et Android/obb (Shizuku)
@@ -265,6 +279,8 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 **La sauvegarde du téléphone remplace-t-elle celle de Google ?** Non, elle la complète : Android ne permet à aucune application de copier les données internes des autres applis (conversations, SMS, contacts). La sauvegarde Google du téléphone s'en charge ; Fichiers 6b sauvegarde vos fichiers (photos, documents, médias WhatsApp...), ses propres réglages et le coffre-fort, là où vous le choisissez.
 
+**La sauvegarde du téléphone affiche « Suspendue par Android » ?** À partir d'Android 15, le système limite à 6 heures par jour les transferts de données d'une appli en arrière-plan. La sauvegarde continue alors par étapes ; ouvrez Fichiers 6b pour qu'elle reparte à pleine vitesse. Rien n'est perdu : seuls les fichiers manquants sont envoyés (sur Google Drive, même une grosse vidéo reprend où elle s'était arrêtée).
+
 **Où trouver une ancienne version ?** Sur la page [Releases](https://github.com/alexter13/fichiers-6b/releases) : chaque version y garde son APK, ses notes et son empreinte.
 
 **Pourquoi un PDF n'est-il pas partagé « sans métadonnées » ?** Il est protégé par un mot de passe ou chiffré : ses informations ne peuvent pas être retirées sans le mot de passe du propriétaire. Plutôt que de l'envoyer tel quel à votre insu, l'appli refuse et vous laisse choisir le partage normal.
@@ -289,7 +305,7 @@ Tant que l'application est en test chez Google, **l'autorisation expire au bout 
 
 ## ✅ Vérifier l'authenticité
 
-- Empreinte SHA-256 de l'APK 2.0.2 : `ad813ab0ad3a585d67923e154c3ad602ba062473c2c644d08d936d4064bab5f1` (aussi affichée sur la page de la [version 2.0.2](https://github.com/alexter13/fichiers-6b/releases/tag/v2.0.2))
+- Empreinte SHA-256 de l'APK 2.0.3 : `fae8692dca96bc514c3f1ef3fd22e5ce429c04d45278b14eff9147370dd2e41c` (aussi affichée sur la page de la [version 2.0.3](https://github.com/alexter13/fichiers-6b/releases/tag/v2.0.3))
 - Certificat de signature (SHA-256) : `B6:B9:3D:81:05:8F:BD:C4:00:4D:05:87:8E:6F:0D:35:37:89:C4:AC:6B:03:FF:9D:89:2B:C4:0D:95:5E:FB:EB`
 
 <div align="center">
