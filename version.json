@@ -1,8 +1,8 @@
 {
-  "version": "2.0.1",
+  "version": "2.0.2",
   "apk": "Fichiers6b.apk",
-  "url": "https://github.com/alexter13/fichiers-6b/releases/download/v2.0.1/Fichiers6b.apk",
+  "url": "https://github.com/alexter13/fichiers-6b/releases/download/v2.0.2/Fichiers6b.apk",
   "size": 8046524,
-  "sha256": "d563de61b34e444444d3104ba606957ead5c10af151a883b635a3c69be0e0a86",
-  "notes": "- Sauvegarde du téléphone : dates d'origine restaurées sur tous les serveurs, WebDAV compris.\n- Taille exacte de la sauvegarde affichée et espace libre vérifié avant de restaurer.\n- Un fichier refusé par le serveur n'empêche plus la restauration.\n- Google Drive et WebDAV : « Arrêter » immédiat, plus de fichier tronqué sur la destination.\n- Coffre ou configuration illisibles : photos et documents sauvegardés quand même.\n- Android 12+ : données de l'appli exclues de l'assistant de copie Google (mots de passe liés au téléphone)."
+  "sha256": "ad813ab0ad3a585d67923e154c3ad602ba062473c2c644d08d936d4064bab5f1",
+  "notes": "- Google Drive reste proposé comme destination de sauvegarde après un redémarrage ou une mise à jour de l'appli.\n- Sauvegarde du téléphone : un bouton grisé dit toujours pourquoi (destination, mot de passe, dossiers).\n- Boutons « Connecter Google Drive » et « Ajouter un NAS / serveur » dans la section Destination.\n- Destination supprimée signalée à l'écran."
 }
